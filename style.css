@@ -1,0 +1,76 @@
+.backg
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(0, 136, 215); */
+}
+.chat h1
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chat p
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chat
+{
+    margin-top: 100px;
+}
+/* .wee
+{
+    display: flex;
+    background-color: grey;
+    width: fit-content; 
+    align-items: center;
+    justify-content: center;
+} */
+.bot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; /* Adjust as needed */
+    
+
+  }
+  
+  .wee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(120, 120, 120, 0.1);
+    width: fit-content;
+    /* margin-left: -20px; */
+    border-radius: 4px;
+    border: 1px solid rgba(120, 120, 120, 0.205);
+    padding: 7px;
+  }
+ .search
+ {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(120, 120, 120, 0.1);
+    width: 400px;
+    margin-left: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    /* margin-right: -200px; */
+    
+ }
+ .search input
+ {
+    border: none;
+    
+ }
+ .search button
+ {
+    margin-left: 170px;
+    background-color: rgba(0, 0, 255, 0.557);
+    color: white;
+    border-radius: 5px;
+ }
