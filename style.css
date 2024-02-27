@@ -89,9 +89,9 @@
     white-space: nowrap;
     margin-left: 580px;
     margin-top: 40px;
-    overflow: hidden; /* Hide the text outside the container */
-    /* Removed the cursor effect for simplicity */
-    animation: typing 8s steps(40, end) forwards; /* Ensure animation stays at final state */
+    overflow: hidden; 
+    
+    animation: typing 6s steps(40, end) forwards; 
   }
   
   @keyframes typing {
@@ -101,17 +101,17 @@
   
   .wee {
     display: inline-block;
-    font-family: monospace; /* Enhances the typewriter-like feel */
+    font-family: monospace; 
   }
 
   .messages {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align messages */
-    width: 100%; /* Or a specific width as needed */
+    align-items: center;
+    width: 100%;
     margin: 0 auto;
     margin-left: 140px;
-    overflow: auto; /* Handle overflow */
+    overflow: auto; 
 }
 
 
