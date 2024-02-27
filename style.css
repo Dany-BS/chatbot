@@ -19,7 +19,7 @@
 }
 .chat
 {
-    margin-top: 100px;
+    margin-top: 60px;
 }
 /* .wee
 {
@@ -49,24 +49,32 @@
     border: 1px solid rgba(120, 120, 120, 0.205);
     padding: 7px;
   }
+
  .search
  {
     display: flex;
     justify-content: center;
     background-color: rgba(120, 120, 120, 0.1);
     width: 400px;
-    margin-left: 600px;
+    margin-left: 580px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 20px;
+    border:1px solid rgba(120, 120, 120, 0.1);
+    border-radius: 10px;
     /* margin-right: -200px; */
     
  }
  .search input
  {
     border: none;
+    background-color: transparent;
     
  }
+ input:focus {
+    outline: none;
+  }
+  
  .search button
  {
     margin-left: 170px;
@@ -74,3 +82,53 @@
     color: white;
     border-radius: 5px;
  }
+
+  
+ .bot {
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 580px;
+    margin-top: 40px;
+    overflow: hidden; /* Hide the text outside the container */
+    /* Removed the cursor effect for simplicity */
+    animation: typing 8s steps(40, end) forwards; /* Ensure animation stays at final state */
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  .wee {
+    display: inline-block;
+    font-family: monospace; /* Enhances the typewriter-like feel */
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align messages */
+    width: 100%; /* Or a specific width as needed */
+    margin: 0 auto;
+    margin-left: 140px;
+    overflow: auto; /* Handle overflow */
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.user-message {
+    background-color: #f1f1f1;
+    padding: 8px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    width: fit-content;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+
+  
