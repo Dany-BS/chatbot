@@ -21,14 +21,7 @@
 {
     margin-top: 60px;
 }
-/* .wee
-{
-    display: flex;
-    background-color: grey;
-    width: fit-content; 
-    align-items: center;
-    justify-content: center;
-} */
+
 .bot {
     display: flex;
     justify-content: center;
@@ -131,4 +124,22 @@
 }
 
 
+.bot-message {
+  width: 200px;
+  background-color: #e0e0e0; 
+  padding: 8px 15px;
+  margin: 10px 0;
+  border-radius: 4px;
   
+  display: block;
+  margin-left: -380px;
+ 
+}
+@keyframes bot-fade-in {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.bot-message {
+  animation: bot-fade-in 0.5s ease-out;
+  
+}
