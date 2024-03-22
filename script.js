@@ -31,9 +31,24 @@ document.addEventListener("DOMContentLoaded", function() {
         for (const word of words) {
             if (botResponses[word]) {
                 const botMessageDiv = document.createElement("div");
-                botMessageDiv.textContent = "BOT : " + botResponses[word];
-                botMessageDiv.className = 'bot-message'; // Use the 'bot-message' class for bot responses
+                botMessageDiv.className = 'bot-message';
                 messagesDiv.appendChild(botMessageDiv);
+                
+                // Split the response into words
+                const responseWords = botResponses[word].split(" ");
+    
+                // Function to add each word with a delay
+                let i = 0;
+                function addWord() {
+                    if (i < responseWords.length) {
+                        
+                        botMessageDiv.textContent += responseWords[i] + " ";
+                        i++;
+                        setTimeout(addWord, 200); // Adjust delay as needed
+                    }
+                }
+    
+                addWord(); // Start adding words
                 responseFound = true;
                 break;
             }
@@ -41,9 +56,23 @@ document.addEventListener("DOMContentLoaded", function() {
     
         if (!responseFound) {
             const botMessageDiv = document.createElement("div");
-            botMessageDiv.textContent = "BOT : I'm not sure how to respond to that. Can you try asking something else?";
-            botMessageDiv.className = 'bot-message'; // Also use 'bot-message' for default responses
+            botMessageDiv.className = 'bot-message';
             messagesDiv.appendChild(botMessageDiv);
+    
+            // Split the default response into words
+            const responseWords = "BOT: I'm not sure how to respond to that. Can you try asking something else?".split(" ");
+    
+            // Function to add each word with a delay
+            let i = 0;
+            function addWord() {
+                if (i < responseWords.length) {
+                    botMessageDiv.textContent += responseWords[i] + " ";
+                    i++;
+                    setTimeout(addWord, 200); // Adjust delay as needed
+                }
+            }
+    
+            addWord(); // Start adding words
         }
     
         messagesDiv.scrollTop = messagesDiv.scrollHeight;
