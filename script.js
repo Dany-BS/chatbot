@@ -94,3 +94,55 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+// to show img with fees
+const botResponses = {
+    ...
+    "fees": {
+        "text": "Our tuition fees vary depending on the course. You can find more details on our fees page.",
+        "img": "https://your-server.com/path-to-your-image.jpg" // Replace with your image URL
+    },
+    ...
+};
+
+function displayBotResponse(userInput) {
+    const words = userInput.toLowerCase().split(" ");
+    let responseFound = false;
+
+    for (const word of words) {
+        if (botResponses[word]) {
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.className = 'bot-message';
+            messagesDiv.appendChild(botMessageDiv);
+
+            // Check if the response is an object with text and img
+            if (typeof botResponses[word] === "object") {
+                const responseWords = botResponses[word].text.split(" ");
+
+                // Function to add each word with a delay
+                let i = 0;
+                function addWord() {
+                    if (i < responseWords.length) {
+                        botMessageDiv.textContent += responseWords[i] + " ";
+                        i++;
+                        setTimeout(addWord, 200); // Adjust delay as needed
+                    }
+                }
+
+                addWord(); // Start adding words
+
+                // Add an image
+                const img = document.createElement("img");
+                img.src = botResponses[word].img;
+                img.alt = "Image description";
+                messagesDiv.appendChild(img);
+            } else {
+                // Existing code to handle text-only responses
+            }
+
+            responseFound = true;
+            break;
+        }
+    }
+
+    // Rest of your code...
+}
